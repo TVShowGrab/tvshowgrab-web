@@ -1,0 +1,22 @@
+<template name="ResultLine">
+    <li>
+        <div class="collapsible-header"><i class="material-icons">movie</i>{{getTitle title}}</div>
+        <div class="collapsible-body white">
+            <p class="url" style="display: none">{{url}}</p>
+            {{#if ready}}
+                <ul class="collection with-header">
+                    <li class="collection-header"><h4>Liens MEGA</h4></li>
+                    {{#each links}}
+                        <li class="collection-item"><div>{{link_title}}<a href="{{link}}" target="blank" class="secondary-content"><i class="material-icons">file_download</i></a></div></li>
+                    {{/each}}
+                </ul>
+            {{else}}
+                <div style="padding: 20px">
+                    <div class="progress">
+                        <div class="indeterminate"></div>
+                    </div>
+                </div>
+            {{/if}}
+        </div>
+    </li>
+</template>

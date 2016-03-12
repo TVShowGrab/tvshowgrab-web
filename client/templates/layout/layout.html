@@ -1,0 +1,30 @@
+<template name="Layout">
+    <header>
+        <h5 class="white-text">TVShowGrab</h5>
+        <a class="waves-effect waves-white btn-flat white-text modal-trigger" style="float:right" href="#about">About</a>
+    </header>
+    <div>
+            {{> yield}}
+    </div>
+
+    <div id="about" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>About</h4>
+            <p>
+               Open-source website to grab directly the MEGA-links of your favorite TV Shows, from tu-series.com <br><br>
+               Currently in development. <br><br>
+               Created by Pierre Jacquier.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-pink pink-text btn-flat ">Thanks, sir</a>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.modal-trigger').leanModal();
+        });
+    </script>
+
+</template>
